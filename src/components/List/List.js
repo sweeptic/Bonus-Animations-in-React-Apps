@@ -23,16 +23,17 @@ class List extends Component {
         });
     }
 
-    render () {
-        const listItems = this.state.items.map( (item, index) => (
-            <li 
+    render() {
+        const listItems = this.state.items.map((item, index) => (
+            <li
                 key={index}
-                className="ListItem" 
+                className="ListItem"
                 onClick={() => this.removeItemHandler(index)}>{item}</li>
-        ) );
+        ));
 
         return (
             <div>
+
                 <button className="Button" onClick={this.addItemHandler}>Add Item</button>
                 <p>Click Item to Remove.</p>
                 <ul className="List">
